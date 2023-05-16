@@ -1,0 +1,49 @@
+::-webkit-scrollbar {
+  display: none;
+}
+
+.overlay {
+  height: 100%;
+  background-image: linear-gradient(360deg, rgba(70, 175, 189, 0.46) 0%, #04345C 100%);
+display: flex;
+flex-direction: column;
+
+}
+
+.home {
+  color: aliceblue;
+  background-color: #10564F;
+  font-size: 3rem;
+  height: 150vh;
+  font-family: modern;
+
+}
+.header{
+  transform: translateY(15rem);
+  font-size: 5rem;
+  display: flex;
+  justify-content: center;
+}
+.content{
+  transform: translate(10rem,20rem);
+  font-family: serif;
+}
+.how_to_play{
+  font-size: 2rem;
+  transform: translate(5rem,28rem);
+}
+.playhere{
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  height: 100vh;
+}
+.card{
+  border: 2px solid black;
+  height: 30rem;
+  width:20rem ;
+  border-radius: 1rem;
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+}
