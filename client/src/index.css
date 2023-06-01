@@ -11,14 +11,3 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
-html{
-  font-size: 10px;
-}
-@font-face {
-  font-family: 'serif';
-  src: local('serif'), url(./Font/serif.otf) format('Opentype');
-}
-@font-face {
-  font-family: 'modern';
-  src: local('modern'), url(./Font/modern.otf) format('Opentype');
-}

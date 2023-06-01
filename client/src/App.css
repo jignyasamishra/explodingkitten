@@ -1,49 +1,204 @@
-::-webkit-scrollbar {
-  display: none;
-}
+@import url("https://fonts.googleapis.com/css2?family=Chivo+Mono:wght@100;400;700&display=swap");
 
-.overlay {
-  height: 100%;
-  background-image: linear-gradient(360deg, rgba(70, 175, 189, 0.46) 0%, #04345C 100%);
-display: flex;
-flex-direction: column;
+* {
+	font-family: "Bebas Neue";
+	margin: 0;
+	background-color:	#211522;
+	color:#C197D2;
 
 }
 
-.home {
-  color: aliceblue;
-  background-color: #10564F;
-  font-size: 3rem;
-  height: 150vh;
-  font-family: modern;
+.app-playfield {
+	padding: 0 1rem;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: flex-start;
+	gap: 1rem;
+}
+
+@media screen and (max-width: 960px) {
+	.app-playfield {
+		flex-direction: column;
+		justify-content: flex-start;
+		align-items: center;
+	}
+}
+
+.game {
+	margin: auto;
+	flex-grow: 5;
+	max-width: 50rem;
+}
+
+.navbar {
+	padding: 1rem 2rem;
+	margin-bottom: 1rem;
+	background-color: 	#211522;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	flex-wrap: wrap;
+	gap: 1rem;
+}
+/* that peach bg */
+.deck {
+	width: 100%;
+	margin-bottom: 1rem;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	align-items: center;
+	border-radius: 2rem;
+	min-height: 50vh;
+	max-height: 100%;
+	background-color:	#211522;
+}
+
+/* .hidden:hover{
+  transform: scale(1.1);
+} */
+
+
+/* //for cards */
+.card {
+	cursor: grab;
+	width: 8rem;
+	height: 10rem;
+	margin:1rem;
+	border-radius: 10px;
+	box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+	background-color:#fff;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	backface-visibility: hidden;
+	transform-style: preserve-3d;
+	transition: transform 0.3s ease-in-out;
+}
+
+.cardContent {
+	font-size: xx-large;
+	background-color: #fff;
+	border-radius:"10px"
+}
+
+/* rotation animation */
+.card.notHidden {
+	transform: rotateX(-360deg);
+}
+
+.inventory {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: flex-end;
+	gap: 1rem;
+}
+
+/* //cards left diffuse cards etc */
+#leaderboard {
+	border-collapse: collapse;
+	/* width: 100%; */
+}
+
+#leaderboard td,
+#leaderboard th {
+	/* border: 1px solid #83750b; */
+	padding: 8px;
+}
+
+#leaderboard tr:nth-child(even) {
+	background-color: #f2f2f2;
+}
+
+#leaderboard tr:hover {
+	background-color: #ddd;
+}
+
+#leaderboard th {
+	text-align: left;
+	background-color: #ffd102;
+	color: rgb(99, 76, 2);
+}
+
+#leaderboard th:first-of-type {
+	border-top-left-radius: 10px;
+}
+#leaderboard th:last-of-type {
+	border-top-right-radius: 10px;
+}
+
+#leaderboard tr:last-of-type td:first-of-type {
+	border-bottom-left-radius: 10px;
+}
+
+#leaderboard tr:last-of-type td:last-of-type {
+	border-bottom-right-radius: 10px;
+}
+
+.gameStatusMessage {
+	margin: auto;
+	max-width: 15rem;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+}
+
+.statusText {
+	text-align: center;
+}
+.statusButtons {
+	width: 100%;
+	display: flex;
+	align-items: center;
+	padding: 0.7rem;
+	justify-content: center;
+	gap: 2rem;
+}
+
+.statusButtons button {
+	font-size: large;
+	cursor: pointer;
+	border-radius: 1rem;
+	background-image: #D3B1C2;
+	padding: 1rem;
+}
+
+.topBar {
+	margin-bottom: 1rem;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	gap: 5rem;
+}
+
+.currentScore {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 0.5rem;
+}
+
+.form {
+	display: flex;
+	flex-direction: column;
+	align-items: flex-end;
+	gap: 0.3rem;
+}
+
+.formLabel {
+	font-size: small;
+}
+.formInput {
+	display: flex;
+	gap: 0.3rem;
 
 }
-.header{
-  transform: translateY(15rem);
-  font-size: 5rem;
-  display: flex;
-  justify-content: center;
+.formInput input:focus{
+outline: none;
+
+
 }
-.content{
-  transform: translate(10rem,20rem);
-  font-family: serif;
-}
-.how_to_play{
-  font-size: 2rem;
-  transform: translate(5rem,28rem);
-}
-.playhere{
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-  height: 100vh;
-}
-.card{
-  border: 2px solid black;
-  height: 30rem;
-  width:20rem ;
-  border-radius: 1rem;
-  background-size: contain;
-  background-position: center;
-  background-repeat: no-repeat;
+.formInput input{
+	color:#211522 ;
+	border-radius: 5px;
 }
